@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/teal_200">
+        <TextView
+            android:id="@+id/tv"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MY TASK"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+        <EditText
+            android:id="@+id/searchThongKe"
+            app:layout_constraintTop_toBottomOf="@id/tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:hint="Nhap nghiem vu can tim"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <ImageButton
+            android:id="@+id/BtnsearchThongKe"
+            app:layout_constraintLeft_toRightOf="@id/searchThongKe"
+            app:layout_constraintTop_toBottomOf="@id/tv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_search"
+            android:layout_marginLeft="-40dp"
+            />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/searchThongKe"
+            android:id="@+id/soNv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="so nghiem vu: "
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycleViewToday"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        />
+
+</LinearLayout>
